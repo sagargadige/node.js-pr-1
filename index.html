@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+background: linear-gradient(120deg,#00c6ff,#0072ff);
+}
+
+/* NAVBAR */
+
+nav{
+background:rgba(255,255,255,0.9);
+padding:18px 0;
+display:flex;
+justify-content:center; /* CENTER NAVBAR */
+align-items:center;
+gap:40px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+backdrop-filter: blur(5px);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-size:18px;
+font-weight:bold;
+position:relative;
+padding:5px 10px;
+transition:0.3s;
+}
+
+/* Hover underline animation */
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:3px;
+background:#0072ff;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+nav a:hover{
+color:#0072ff;
+}
+
+/* HERO SECTION */
+
+.container{
+height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.container h1{
+font-size:55px;
+margin-bottom:15px;
+letter-spacing:1px;
+}
+
+.container p{
+font-size:20px;
+opacity:0.9;
+}
+
+.btn{
+margin-top:25px;
+padding:14px 35px;
+border:none;
+background:white;
+color:#0072ff;
+font-size:17px;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+background:#005ce6;
+color:white;
+transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/blog">Blog</a>
+</nav>
+
+<div class="container">
+<div>
+<h1>Welcome to Home</h1>
+<p>Create modern websites with clean and beautiful design.</p>
+<button class="btn">Explore More</button>
+</div>
+</div>
+
+</body>
+</html>

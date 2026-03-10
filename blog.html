@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background: linear-gradient(120deg,#8e9eab,#eef2f3);
+min-height:100vh;
+}
+
+/* NAVBAR */
+
+nav{
+background:rgba(255,255,255,0.9);
+padding:18px 0;
+display:flex;
+justify-content:center; /* CENTER NAVBAR */
+align-items:center;
+gap:40px;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+backdrop-filter: blur(5px);
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-size:18px;
+font-weight:bold;
+position:relative;
+padding:5px 10px;
+transition:0.3s;
+}
+
+/* Hover underline animation */
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:3px;
+background:#0072ff;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+nav a:hover{
+color:#0072ff;
+}
+/* PAGE TITLE */
+
+.title{
+text-align:center;
+margin-top:40px;
+font-size:42px;
+color:#333;
+}
+
+/* BLOG CONTAINER */
+
+.blog-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-top:50px;
+padding:20px;
+}
+
+/* BLOG CARD */
+
+.blog-card{
+background:white;
+width:300px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-10px);
+}
+
+.blog-card h3{
+margin-bottom:10px;
+color:#0077ff;
+}
+
+.blog-card p{
+color:#555;
+line-height:1.6;
+}
+
+.read-btn{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#0077ff;
+color:white;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.read-btn:hover{
+background:#005bd1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/blog">Blog</a>
+</nav>
+
+<h1 class="title">Our Blog</h1>
+
+<div class="blog-container">
+
+<div class="blog-card">
+<h3>Web Development</h3>
+<p>Learn the basics of HTML, CSS and JavaScript to build modern and responsive websites.</p>
+<button class="read-btn">Read More</button>
+</div>
+
+<div class="blog-card">
+<h3>Node.js Guide</h3>
+<p>Understand how Node.js works and how it helps developers build fast backend applications.</p>
+<button class="read-btn">Read More</button>
+</div>
+
+<div class="blog-card">
+<h3>MERN Stack</h3>
+<p>Discover how MongoDB, Express, React and Node.js work together to build full stack apps.</p>
+<button class="read-btn">Read More</button>
+</div>
+
+</div>
+
+</body>
+</html>
